@@ -1,0 +1,118 @@
+$base-font: 'VWTextWeb-Regular', sans-serif;
+$base-font-color: #fff;
+$base-bg-color: #7baed4;
+$link-color: #fff;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $base-font;
+	color: $base-font-color;
+	background: $base-bg-color;
+}
+.vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+h1, h2, h3, h4, p, a {color: $base-font-color;}
+p {
+	font-size: 1.1rem;
+}
+h2 {
+	font-size: 1.6rem;
+	text-align:center;
+}
+	
+
+a {
+	color: $link-color !important;
+	text-decoration: none !important;
+	&:hover {
+		color: $link-color;
+		text-decoration:underline;
+	}
+}
+.container-fluid:first-child {
+	padding: 0 2.8rem;
+}
+header {
+	height: 9rem;
+	margin-top: 0.8rem;
+	padding: 0;
+
+	.logo {
+		display: inline-block;
+		float: right;
+		height: 55%;
+		width: auto;
+		@extend .vertical-center;
+		img {
+			display: block;
+			height: 100%;
+
+		}
+	}
+}
+.main-content {
+	height: auto;
+	padding: 0;
+	> img {
+		padding: 0;
+		width: 100%;
+		display: block;
+		float: none;
+	}
+	h2 {
+		margin: 1.1rem 0 1.7rem 0; 
+		overflow: auto;
+	}
+	.big-btn {
+		font-size: 1.7rem;
+		background: $base-font-color;
+		color: $base-bg-color !important;
+		padding: 1.4rem 1.3rem;
+		border-radius: 3px;
+		display: block;
+		margin: 0 1.5rem;
+		text-align:center;
+	}
+	.big-btn + p {
+		margin-top: 5rem;
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
+}
+footer {
+	height: 3rem;
+	width: 100%;
+	padding: 0 !important;
+	p, a {
+		padding:0 1.3rem;
+		font-size:0.93rem;
+		line-height: 3rem;
+		display: inline-block;
+		position: relative;
+		&:after {
+			content: " ";
+			height: 0.93rem;
+			width: 1px;
+			background: white;
+			position: absolute;
+			right: 0; top: 1.035rem;
+		}
+	}
+	p {
+		white-space: nowrap;
+	}
+	a {
+		text-align: center;
+		&:last-child {
+			&:after {
+				content: none;
+			}
+		}
+	}
+}
