@@ -1,19 +1,14 @@
+/*jshint -W117 */
 $(document).ready(function() {
-  function updateText(event) {
-    var input = $(this);
-    // setTimeout(function() {
-    var val = input.val();
-    if (val != '')
-      input.parent().addClass('float-me');
-    else
-      input.parent().removeClass('float-me');
-    // }, 5);
-  }
-  $('.gt-multiInput input').on('keyup input', updateText);
 
-
-  $('.gt-search-form .close-icon').on('click', function() {
-    $('.search-box', $(this).parent()).val('');
+  var desktopButton = document.getElementById('desktop-button');
+    addListener(desktopButton, 'click', function() {
+    ga('send', 'event', 'button', 'click', 'desktop-button');
   });
+  var mobileButton = document.getElementById('mobile-button');
+    addListener(mobileButton, 'click', function() {
+    ga('send', 'event', 'button', 'click', 'mobile-button');
+  });
+
 });
-console.log('cool');
+
